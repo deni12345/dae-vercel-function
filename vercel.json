@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "regions": ["sin1"],
+    "functions": {
+        "api/*.go": {
+            "maxDuration": 60
+        }
+    },
+    "routes": [
+        {
+            "src": "/api/sheet-subscribe",
+            "dest": "/api/sheet-subscribe.go",
+            "methods": ["GET"]
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/health.go",
+            "methods": ["GET"]
+        }
+    ]
+}
