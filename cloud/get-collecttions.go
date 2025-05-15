@@ -19,7 +19,6 @@ func (f *FireStore) GetCollections(ctx context.Context) ([]*firestore.Collection
 		if err == iterator.Done {
 			break
 		}
-
 		if err != nil {
 			return nil, err
 		}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/script.js"></script>
+    <title>API Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .button {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 100px;
+        }
+
+        #conttainer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-container {
+            margin: 10px 0;
+        }
+
+        .result-header {
+            background-color: #f1f1f1;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .result-header:hover {
+            background-color: #ddd;
+        }
+
+        .result {
+            display: none;
+            margin-top: 0;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .result.expanded {
+            display: block;
+        }
+
+        .toggle-icon::after {
+            content: "▼";
+            font-size: 12px;
+        }
+
+        .result-header.expanded .toggle-icon::after {
+            content: "▲";
+        }
+
+        .dot {
+            margin-inline: 10px;
+            width: 0.5rem;
+            height: 0.5rem;
+            display: inline-block;
+            padding: 0.1em;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>API Test Page</h1>
+    </div>
+</body>
+
+</html>
