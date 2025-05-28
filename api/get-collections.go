@@ -8,7 +8,7 @@ import (
 	"github.com/dae-vercel-function/cloud"
 )
 
-func SheetSubscribeHandler(w http.ResponseWriter, r *http.Request) {
+func GetCollectionsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	firestore := cloud.NewFireStore(r.Context(), "drink-and-eat-b7e64")

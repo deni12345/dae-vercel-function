@@ -5,9 +5,14 @@ const API_ENDPOINTS = [
     path: "/api/health",
   },
   {
-    id: "sheet-subscribe",
-    name: "Sheet Subscribe",
-    path: "/api/sheet-subscribe",
+    id: "sheet-listen",
+    name: "Listen Sheet",
+    path: "/api/sheet-listen",
+  },
+  {
+    id: "collections",
+    name: "Collections",
+    path: "/api/collections",
   },
 ];
 

@@ -5,8 +5,8 @@ type ICommon interface {
 }
 
 type DocumentChange struct {
-	Action string
-	Sheet  Sheet
+	Action string `json:"action"`
+	Sheet  Sheet  `json:"sheet"`
 }
 
 var ActionDict = map[int]string{
