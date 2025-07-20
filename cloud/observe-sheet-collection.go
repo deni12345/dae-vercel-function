@@ -37,7 +37,7 @@ func (f *FireStore) ObserveSheetCollection(ctx context.Context, r ObserveSheetCo
 			sheet := model.Sheet{}
 			switch change.Kind {
 			case firestore.DocumentAdded, firestore.DocumentModified:
-				if err := f.documentToModel(ctx, change.Doc.Ref, &sheet); err != nil {
+				if err := f.documentToModel(ctx, change.Doc, &sheet); err != nil {
 					LogError("Fail to observe on sheet %v", change.Doc.Ref.ID)
 					continue
 				}

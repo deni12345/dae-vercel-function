@@ -10,6 +10,11 @@ test:
 	@echo "Running go tests..."
 	go test ./... -v
 
+swag:
+	@echo "Generating swagger documentation..."
+	swag init --parseDependency -g api/swagger.go
+	@echo "Swagger documentation generated."
+
 pre-commit:
 	@echo "Running pre-commit hooks..."
 	golangci-lint run --fix

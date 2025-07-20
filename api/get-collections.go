@@ -8,6 +8,14 @@ import (
 	"github.com/dae-vercel-function/cloud"
 )
 
+// @Summary      Get Firestore collections count
+// @Description  Returns the number of collections in the Firestore database
+// @Tags         collections
+// @Accept       json
+// @Produce      json
+// @Success      200  {object}  map[string]int  "Collections count response"
+// @Failure      500  {string}  string          "Internal Server Error"
+// @Router       /collections [get]
 func GetCollectionsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 

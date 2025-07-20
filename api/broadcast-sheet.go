@@ -9,7 +9,18 @@ import (
 	"github.com/dae-vercel-function/model"
 )
 
-func StreamSheetUpdatesHandler(w http.ResponseWriter, r *http.Request) {
+// @Summary      Broadcast sheet changes in real-time
+// @Description  Stream sheet changes using Server-Sent Events (SSE)
+// @Tags         sheets
+// @Accept       json
+// @Produce      text/event-stream
+// @Param        sheetID  query     string                true  "Sheet ID to observe"
+// @Success      200      {object}  model.DocumentChange  "Stream of sheet changes"
+// @Failure      400      {string}  string                "Bad Request - Missing or invalid sheetID"
+// @Failure      408      {string}  string                "Request Timeout - Client cancelled the request"
+// @Failure      500      {string}  string                "Internal Server Error"
+// @Router       /broadcast-sheet [get]
+func BroadcastSheetHandler(w http.ResponseWriter, r *http.Request) {
 	SetEventStreamHeaders(w)
 
 	sheetID, err := GetURLParam(r, "sheetID")

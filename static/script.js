@@ -6,9 +6,9 @@ const API_ENDPOINTS = [
     method: "GET",
   },
   {
-    id: "sheet-listen",
+    id: "broadcast-sheet",
     name: "Listen Sheet",
-    path: "/api/sheet-listen",
+    path: "/api/broadcast-sheet",
     method: "GET",
   },
   {
