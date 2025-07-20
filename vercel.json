@@ -23,7 +23,7 @@
       "methods": ["GET"]
     },
     {
-      "src": "/api/(.*)",
+      "src": "/api/heath",
       "dest": "/api/health.go",
       "methods": ["GET"]
     }
