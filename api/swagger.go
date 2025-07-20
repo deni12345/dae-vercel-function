@@ -3,6 +3,7 @@ package api
 import (
 	"net/http"
 
+	_ "github.com/dae-vercel-function/docs"
 	httpSwagger "github.com/swaggo/http-swagger"
 )
 

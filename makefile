@@ -2,6 +2,14 @@ vercel-prd:
 	@echo "Deploying to Vercel production..."
 	vercel --prod
 
+#Please run 'make tidy' before you first run the project
+tidy:
+	@echo "Running go mod tidy and vendor..."
+	go mod tidy
+	go clean -modcache
+	go mod vendor
+	@echo "All are good to go"
+
 run:
 	@echo "Running go server..."
 	go run main.go
@@ -19,10 +27,3 @@ pre-commit:
 	@echo "Running pre-commit hooks..."
 	golangci-lint run --fix
 	@echo "Pre-commit hooks completed."
-
-tidy:
-	@echo "Running go mod tidy and vendor..."
-	go mod tidy
-	go clean -modcache
-	go mod vendor
-	@echo "All are good to go"
