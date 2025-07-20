@@ -14,7 +14,7 @@ import (
 // @contact.name   Liem Tran
 // @contact.email  liemtran1414@gmail.com
 
-// @host      localhost:3000
+// @host      drinkandeat.vercel.app
 // @BasePath  /api
 func SwaggerHandler(w http.ResponseWriter, r *http.Request){
 	httpSwagger.Handler(httpSwagger.URL("./doc.json"))(w, r)
