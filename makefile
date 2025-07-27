@@ -1,6 +1,6 @@
 vercel-prd:
 	@echo "Deploying to Vercel production..."
-	vercel --prod
+	vercel --regions sin1 --prod
 
 #Please run 'make tidy' before you first run the project
 tidy:
